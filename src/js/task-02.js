@@ -13,16 +13,16 @@ const ingredients = [
   'Condiments',
 ];
 const elementUl = document.querySelector('#ingredients');
-let elementLi = document.createElement("li");
-
+// let elementLi = document.createElement("li");
+// elementLi.classList.add('item');
+for (let key of ingredients) {
+  let elementLi = document.createElement("li");
+  elementLi.classList.add('item');
+  elementUl.append(elementLi);
+  elementLi.textContent = key;  
+}
 
 console.log(elementUl);
 
 
-// for (let i = 0; i < ingredients.length; i+=1) {
-  
-//   elementLi.textContent = 'lkjl'
-//   elementUl.append(elementLi[i].textContent = ingredients[i]);
-  
-// }
  
