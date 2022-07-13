@@ -15,14 +15,30 @@ const ingredients = [
 const elementUl = document.querySelector('#ingredients');
 // let elementLi = document.createElement("li");
 // elementLi.classList.add('item');
-for (let key of ingredients) {
-  let elementLi = document.createElement("li");
-  elementLi.classList.add('item');
-  elementUl.append(elementLi);
-  elementLi.textContent = key;  
-}
+// for (let key of ingredients) {
+//   let elementLi = document.createElement("li");
+//   elementLi.classList.add('item');
+//   elementUl.append(elementLi);
+//   elementLi.textContent = key;  
+// }
 
-console.log(elementUl);
+// console.log(elementUl);
 
 
- 
+
+// const makeElementLi = (ingredients) => {
+//    let elementLi = document.createElement("li");
+//    elementLi.classList.add('item');
+//   // elementUl.append(elementLi);
+//   // ingredients.forEach((element) => { elementLi.textContent = element });  
+//   ingredients.map(ingredient => elementLi.textContent = ingredient); 
+//   // console.log(ingr);
+//   return elementLi;
+// }
+// let element = ingredients.map(makeElementLi)
+// console.log(element);
+
+//  elementUl.append(makeElementLi(ingredients)) 
+// elementUl.append(ingredients.map(makeElementLi));
+// console.log(elementUl);
+//  console.log(ingredients.map(makeElementLi));
