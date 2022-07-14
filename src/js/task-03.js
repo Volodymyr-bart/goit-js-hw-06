@@ -34,7 +34,12 @@ const makeImage = ({ url, alt }) => {
 
 const elements = images.map(makeImage);
 console.log(elements);
-galleryList.append(...elements);
+
+// galleryList.append(...elements);
+// galleryList.insertAdjacentHTML("beforeend", elements)
+
+
+
 
 // console.log(makeImage(...images));
 

@@ -22,23 +22,17 @@ const elementUl = document.querySelector('#ingredients');
 //   elementLi.textContent = key;  
 // }
 
-// console.log(elementUl);
+console.log(elementUl);
+const makeIngr = (ingredient) => {
+  let elementLi = document.createElement("li");
+  elementLi.classList.add('item');
+  elementLi.textContent = ingredient;
+  // elementLi.style.color = red;
+  // elementLi.style.marginBottom = 30;
+  return elementLi
+}
+const elements = ingredients.map(makeIngr);
+console.log(elements);
+elementUl.append(...elements);
 
 
-
-// const makeElementLi = (ingredients) => {
-//    let elementLi = document.createElement("li");
-//    elementLi.classList.add('item');
-//   // elementUl.append(elementLi);
-//   // ingredients.forEach((element) => { elementLi.textContent = element });  
-//   ingredients.map(ingredient => elementLi.textContent = ingredient); 
-//   // console.log(ingr);
-//   return elementLi;
-// }
-// let element = ingredients.map(makeElementLi)
-// console.log(element);
-
-//  elementUl.append(makeElementLi(ingredients)) 
-// elementUl.append(ingredients.map(makeElementLi));
-// console.log(elementUl);
-//  console.log(ingredients.map(makeElementLi));
