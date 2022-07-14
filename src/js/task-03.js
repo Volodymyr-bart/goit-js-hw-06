@@ -24,18 +24,21 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
-const makeImage = ({ url, alt }) => {
+const makeItem = ({ url, alt }) => {
+  const itemLi = document.createElement('li');
+  console.log(itemLi);
   const imageEl = document.createElement('img');
   imageEl.src = url;
   imageEl.alt = alt;
   imageEl.width = 400;
-  return imageEl
+  itemLi.appendChild(imageEl)
+  return itemLi
 }
 
-const elements = images.map(makeImage);
+const elements = images.map(makeItem);
 console.log(elements);
 
-// galleryList.append(...elements);
+galleryList.append(...elements);
 // galleryList.insertAdjacentHTML("beforeend", elements)
 
 
