@@ -23,3 +23,31 @@
   border-color: #f44336;
 }
 */
+
+const refs = {
+  inputEl: document.querySelector('#validation-input'),  
+};
+const validRule = Number(refs.inputEl.dataset.length);
+console.log(validRule);
+
+
+refs.inputEl.addEventListener('blur', onInputBlur);
+
+function onInputFocus() {
+  console.log('Focus');    
+}
+
+function onInputBlur(event) {
+  console.log('Blur');
+  if (event.currentTarget.value.length === validRule) {
+      // console.log(`valid`);
+      refs.inputEl.classList.add(`valid`);
+      refs.inputEl.classList.remove(`invalid`);
+  } else {
+    // console.log(`not valid`);
+      refs.inputEl.classList.remove(`valid`);
+      refs.inputEl.classList.add(`invalid`);
+    
+    }
+    
+}
