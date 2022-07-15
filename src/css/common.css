@@ -15,18 +15,18 @@ body {
 
 input {
   padding: 8px;
-  font: inherit;
+  font: inherit;  
 }
 
 button {
   padding: 8px 12px;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
-/* .gallery{
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  
-} */
+.gallery{
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+.list-item{
+  /* width: 400px; */
+}

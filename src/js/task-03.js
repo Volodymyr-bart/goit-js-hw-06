@@ -24,40 +24,39 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
-const makeItem = ({ url, alt }) => {
-  const itemLi = document.createElement('li');
-  console.log(itemLi);
-  const imageEl = document.createElement('img');
-  imageEl.src = url;
-  imageEl.alt = alt;
-  imageEl.width = 400;
-  itemLi.appendChild(imageEl)
-  return itemLi
-}
+const makeItem = images
+  .map(({ url, alt }) => 
+`<li class="list-item"><img src="${url}" alt="${alt}"></li>`)
+  .join("");
+galleryList.insertAdjacentHTML("afterbegin", makeItem);
 
-const elements = images.map(makeItem);
-console.log(elements);
 
-galleryList.append(...elements);
-// galleryList.insertAdjacentHTML("beforeend", elements)
+galleryList.style.display = "flex"
+// galleryList.style.flexDirection = "column";
+// const galleryItem = document.querySelector('.list-item');
+// const galleryItem
+// console.log(galleryItem);
+// galleryItem.style.display = 'inline-block';
 
+// galleryItem.style.width = '400px';
 
 
 
-// console.log(makeImage(...images));
 
-// const elements = images.map(image => {
+// // =====================================================================
+// const galleryList = document.querySelector('.gallery');
+// const makeItem = ({ url, alt }) => {
+//   const itemLi = document.createElement('li');
+//   console.log(itemLi);
 //   const imageEl = document.createElement('img');
-//   imageEl.src = image.src;
-//   console.log(imageEl.src);
-//   imageEl.alt = image.alt;
-//   console.log(imageEl.alt);
-//   return imageEl
-// });
+//   imageEl.src = url;
+//   imageEl.alt = alt;
+//   imageEl.width = 400;
+//   itemLi.appendChild(imageEl)
+//   return itemLi
+// }
+
+// const elements = images.map(makeItem);
 // console.log(elements);
 
-
-// console.log(galleryList);
-
-
-// galleryList.appendChild(imageEl)
+// galleryList.append(...elements);
