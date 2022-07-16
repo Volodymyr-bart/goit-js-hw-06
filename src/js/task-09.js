@@ -23,16 +23,14 @@ const colorBody = document.querySelector('body');
 console.log(colorBody);
 
 
-const handleClick = event => {
+onClickBtnChangeColor.addEventListener("click", () => {
   console.log('Click the btn');
   // console.log(`${getRandomHexColor()}`);
   colorBody.style.backgroundColor = `${getRandomHexColor()}`;
   fieldOutputColor.textContent = colorBody.style.backgroundColor;
   // console.log(event);
   console.log(colorBody);
-};
-
-onClickBtnChangeColor.addEventListener("click", handleClick);
+});
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
