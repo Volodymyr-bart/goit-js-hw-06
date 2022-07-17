@@ -31,7 +31,7 @@ form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
   // забирає оновлення після натискання кнопки
   event.preventDefault();  
-  const formElements = event.currentTarget.elements; 
+  // const formElements = event.currentTarget.elements; 
   // const email = formElements.email.value;
   // const password = formElements.password.value;
   const { elements: { email, password } } = event.currentTarget;
