@@ -50,7 +50,7 @@ function createBoxes(amount) {
     console.log(elementDiv.style.width);
     elementDiv.style.height = `${size + i*10}px`;
     elements.push(elementDiv);
-    console.log(elements);  
+    // console.log(elements);  
   }
   blockDiv.append(...elements);  
   // console.log(blockDiv);
