@@ -10,7 +10,6 @@
 
 const inputSizeRadioBtn = document.querySelector('#font-size-control');
 const textSizeSpan = document.querySelector('#text');
-console.dir(inputSizeRadioBtn);
 textSizeSpan.style.fontSize = `${inputSizeRadioBtn.valueAsNumber}px`;
 
 inputSizeRadioBtn.addEventListener(`input`, (event) => {

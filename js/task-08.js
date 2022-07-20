@@ -36,7 +36,7 @@ function onFormSubmit(event) {
   // const password = formElements.password.value;
   const { elements: { email, password } } = event.currentTarget;
 
-  if (email.value.length === 0 && password.value.length === 0) {
+  if (email.value.length === 0 || password.value.length === 0) {
     return alert(`Попередженням про те, що всі поля повинні бути заповнені!`)
   }
   console.log({
