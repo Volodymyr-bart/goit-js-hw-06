@@ -30,10 +30,7 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
   // забирає оновлення після натискання кнопки
-  event.preventDefault();  
-  // const formElements = event.currentTarget.elements; 
-  // const email = formElements.email.value;
-  // const password = formElements.password.value;
+  event.preventDefault();
   const { elements: { email, password } } = event.currentTarget;
 
   if (email.value.length === 0 || password.value.length === 0) {
@@ -44,18 +41,6 @@ function onFormSubmit(event) {
     password: password.value,
   });
  
-  // if (formElements.email.value.length !== 0 && formElements.password.value.length !== 0) {
-  //   console.log("valid");
-  //   // const formData = {
-  //   //   email,
-  //   //   password,
-  //   // }
-  //   // console.log(formData);
-  // }
-  // else {
-  //   console.log(" попередженням про те, що всі поля повинні бути заповнені.");
-  // }
-  
   event.currentTarget.reset();
 };
 // ============================================================================================
